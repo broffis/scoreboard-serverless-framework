@@ -1,0 +1,103 @@
+.group {
+  position: relative;
+
+  @include breakpoint-d-sm {
+    overflow-x: scroll;
+  }
+ 
+  &__grid {
+    display: grid;
+    grid-gap: 16px;
+    padding: 5px 0 5px 0;
+    grid-template-columns: minmax(261px, 1.5fr) repeat(auto-fit,minmax(125px,1fr));
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px,1fr);
+    align-items: center;
+    font-family: $font-secondary;
+
+    @include breakpoint-sm {
+      grid-template-columns: minmax(261px, 1.5fr) repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    & > * {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      border: 1px solid rgba($color-gray, 0.2);
+      background-color: rgba($color-gray, 0.05);
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__grid-headers {
+    padding: 0 0 5px 0;
+  }
+
+  &__grid-header {
+    padding: 10px 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $color-font;
+    font-weight: $font-family-semi-bold;
+
+    &:hover {
+      background-color: rgba($color: $color-gray, $alpha: 0.8);
+      color: $color-white;
+    }
+
+    &--scroll {
+
+      @include breakpoint-sm {
+        overflow: hidden;
+      }
+    }
+    
+    &--sticky {
+      // position: sticky;
+      justify-content: center;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.group-player {
+
+  &__player-info {
+    display: flex;
+    padding: 10px 5px;
+    // position: sticky;
+    left: 0;
+    z-index: 1;
+
+    img {
+      height: 53px;
+    }
+  }
+
+  &__player-name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.2;
+
+
+    .country-subtext {
+      font-size: 0.85rem;
+    }
+  }
+
+  &__score {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+
+  &__score-box {
+    justify-content: center;
+    align-items: center;
+  }
+}

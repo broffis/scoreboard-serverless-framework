@@ -1,0 +1,39 @@
+.group-banner {
+  display: grid;
+  padding: 20px 0;
+  background-image: url('../images/textures/dark-leather.png');
+
+  @include breakpoint-sm {
+    padding: 20px 100px 20px 50px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 368px auto 200px;
+  }
+
+  &__leader-flag {
+    display: none;
+    width: 100%;
+    align-self: center;
+
+    @include breakpoint-sm {
+      display: block;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+  }
+  
+  &__name {
+    display: none;
+    align-self: center;
+    font-size: 3.5rem;
+    font-family: $font-primary;
+    font-weight: $font-family-lightest;
+    color: $color-white;
+    text-decoration: none;
+
+    @include breakpoint-sm {
+      display: block;
+    }
+  }
+}

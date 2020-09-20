@@ -1,0 +1,14 @@
+.event-form {
+  display: flex;
+  flex-direction: column;
+
+  &__input-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 15px 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

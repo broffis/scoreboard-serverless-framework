@@ -1,0 +1,121 @@
+.hamburger-container {
+  display: inline-block;
+  cursor: pointer;
+  align-self: center;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: $color-white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.side-bar-menu {
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  
+  background-color: rgb(85, 120, 155);
+  transition: width 0.5s;
+  overflow-x: hidden;
+  text-align: center;
+
+
+  &.hidden {
+    width: 0;
+  }
+
+  &.isVisible {
+    width: 33%;
+    max-width: 450px;
+    padding: 20px 0 0 50px;
+  }
+
+  &__add-items {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__add-item {
+    cursor: pointer;
+    padding: 10px 0;
+    font-family: $font-secondary;
+    color: $color-white;
+    text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+    list-style: none;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  &__competition-name {
+    margin-bottom: 30px;
+
+    > a {
+      text-decoration: none;
+      font-family: $font-primary;
+      font-size: 2rem;
+      color: $color-white;
+      text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+    }
+  }
+
+  &__container {
+    position: relative;
+    height: 100vh;
+  }
+
+  &__link {
+    padding: 10px 0;
+    font-family: $font-secondary;
+    color: $color-white;
+    text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+    list-style: none;
+
+    > a {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  &__sub-links-btn {
+    &:hover {
+      .side-bar-menu__sub-links {
+        display: block;
+      }
+    }
+  }
+
+  &__sub-links {
+    display: none;
+  }
+
+  &__sub-link {
+    padding: 10px 0;
+    font-family: $font-secondary;
+    color: $color-white;
+    text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+    list-style: none;
+
+    > a {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}

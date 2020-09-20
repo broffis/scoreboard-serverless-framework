@@ -1,0 +1,70 @@
+.heading-1 {
+  font-size: 2rem;
+}
+
+.heading-2 {
+  font-size: 1.75rem;
+}
+
+.heading-3 {
+  font-size: 1.5rem;
+}
+
+.heading-4 {
+  font-size: 1.25rem;
+}
+
+.subtext-1 {
+  font-size: 1.1rem;
+}
+
+.subtext-2 {
+  font-size: 1rem;
+}
+
+.subtext-3 {
+  font-size: 0.9rem;
+}
+
+.subtext-4 {
+  font-size: 0.8rem;
+}
+
+.legal-text-1 {
+  font-size: 0.75rem;
+}
+
+.legal-text-2 {
+  font-size: 0.65rem;
+}
+
+.legal-text-3 {
+  font-size: 0.5rem;
+}
+
+.italics {
+  font-style: italic;
+}
+
+// FONT WEIGHTS
+$font-family:(
+  default: $font-family-regular,
+  bold: $font-family-bold,
+  semibold: $font-family-semi-bold,
+  regular: $font-family-regular,
+  light: $font-family-light
+);
+
+@each $key, $val in $font-family {
+  .font-primary-#{$key} {
+    font-family: $font-primary;
+    font-weight: #{$val};
+  }
+}
+
+@each $key, $val in $font-family {
+  .font-secondary-#{$key} {
+    font-family: $font-secondary;
+    font-weight: #{$val};
+  }
+}

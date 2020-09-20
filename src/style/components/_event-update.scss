@@ -1,0 +1,52 @@
+.event-update {
+  display: flex;
+  flex-direction: column;
+
+
+  &__header {
+    display: flex;
+  }
+
+  &__header-label-player,
+  &__header-label-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  &__header-label-player {
+    width: 75%;
+  }
+
+  &__header-label-score {
+    width: 25%;
+  }
+
+  &__players {
+    margin-bottom: 15px;
+    list-style: none;
+  }
+
+  &__player-row {
+    display: flex;
+    border-bottom: 1px solid black;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__player-name,
+  &__player-score {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+
+  &__player-name {
+    width: 75%;
+  }
+
+  &__player-score {
+    width: 25%;
+  }
+}

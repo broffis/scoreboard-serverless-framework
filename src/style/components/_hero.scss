@@ -1,0 +1,40 @@
+.hero {
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  background-color: $color-main-dark;
+  background-image: url('../images/textures/dark-leather.png');
+
+  &__img {
+    height: 100%;
+    max-height: 250px;
+    position: relative;
+
+    @include breakpoint-xs {
+      max-height: 360px;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+  }
+
+  &__text {
+    font-family: $font-primary;
+    font-size: 3.5rem;
+    font-weight: $font-family-lightest;
+    color: $color-white;
+
+    @include breakpoint-sm {
+      font-size: 5rem;
+    }
+  }
+}

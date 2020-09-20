@@ -1,0 +1,89 @@
+/* BREAKPOINTS */
+
+/* MOBILE FIRST */
+@mixin breakpoint-xxs {
+  @media (min-width: #{$screen-xxs}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xs {
+  @media (min-width: #{$screen-xs}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-lg {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xl {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-xxl {
+  @media (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tv {
+  @media (min-width: #{$screen-tv}) {
+    @content;
+  }
+}
+
+/* DESKTOP FIRST */
+@mixin breakpoint-d-xs {
+  @media (max-width: #{$screen-xs - 1}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-d-sm {
+  @media (max-width: #{$screen-sm - 1}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-d-md {
+  @media (max-width: #{$screen-md - 1}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-d-lg {
+  @media (max-width: #{$screen-lg - 1}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-d-xl {
+  @media (max-width: #{$screen-xl - 1}) {
+    @content;
+  }
+}
+
+/* CUSTOM */
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

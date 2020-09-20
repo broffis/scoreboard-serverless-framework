@@ -1,0 +1,16 @@
+.u-hide-sm-down {
+  @include breakpoint-d-sm {
+    display: none !important;
+  }
+}
+
+.u-hide-sm-up {
+
+  @include breakpoint-sm {
+    display: none !important;
+  }
+}
+
+.u-display-none {
+  display: none !important;
+}

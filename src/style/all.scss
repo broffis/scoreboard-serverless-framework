@@ -1,0 +1,58 @@
+@import 'variables/all';
+@import 'mixins/all';
+@import 'utilities/all';
+
+@import 'components/all';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: $color-font;
+}
+
+
+.App {
+  background-color: $color-background;
+}
+
+.nav {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: $color-gray;
+
+  &__link {
+    margin: 15px 0;
+
+    > a {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &--text {
+      font-family: $font-primary;
+      font-weight: $font-family-lightest;
+      color: $color-white;
+      text-shadow: -1px 0 #262262, 0 1px #262262, 1px 0 #262262, 0 -1px #262262;
+    }
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
