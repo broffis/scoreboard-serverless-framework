@@ -24,11 +24,13 @@ const GroupBanner = (props) => {
       .then(s => setScores(s))
   }, [events, props._id, props.competition_id, props.groupId]);
 
-  let display = <h3>No current leader</h3>
+  let display = '';
 
-  if (scores && scores.length >= 0) {
-    display = <img className="group-banner__leader-flag" src={scores[0].country_flag} alt={`${scores[0].country_name}`}/>
-  }
+  setTimeout(() => {
+    if (scores && scores.length > 0) {
+      display = <img className="group-banner__leader-flag" src={scores[0].country_flag} alt={`${scores[0].country_name}`}/>
+    }
+  }, 1000);
 
   const heroColor = props.heroColor ? props.heroColor : '#55789b';
 
