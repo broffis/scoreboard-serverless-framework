@@ -38,8 +38,8 @@ const EventUpdate = (props) => {
           scores.map(playerScore => (
             <li key={`${props.event.event_name.replace(/\s/, '-')}-${playerScore.player_id}`} className="event-update__player-row">
               <span className="event-update__player-name">{playerScore.player_name}</span>
-              <span className="event-update__player-score">{playerScore.score.points}</span>
-              <select name="points" value={playerScore.score.points} onChange={(e) => updatePlayerScore(playerScore.player_id, e)}>
+              {/* <span className="event-update__player-score">{playerScore.score.points}</span> */}
+              <select name="points" defaultValue={playerScore.score.points} onChange={(e) => updatePlayerScore(playerScore.player_id, e)}>
               { props.event.available_points.map(pts => <option value={pts} key={`${props.event.event_name}-available-points-${pts}`}>{pts}</option>) }
               </select>
             </li>
